@@ -4,11 +4,21 @@ BoxLayoutExample:
     orientation: "vertical"
     Button:
         text: "A"
+        # size: "100dp","80dp"
+        size_hint: .8, .5
+        # for pos_hint - pick any one out of the 3 arguments below and give value with dictionary syntax
+        # x, center_x , right for horizontal
+        # y, center_y , left for vertical
+        pos_hint: {"x": 0.5}
     Button:
         text: "B"
+        size_hint: 1,1
     Button:
         text: "C"
-
+        # size: "100dp","80dp"
+        width: "100dp"
+        height: "80dp"
+        size_hint: None,None
 <MainWidget>:
     Button:
         text: "Hello"
