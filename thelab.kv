@@ -1,10 +1,24 @@
-StackLayoutExample:
+ScrollViewExample:
+
+<ScrollViewExample@ScrollView>:
+
+    StackLayoutExample:
+        # width, hieght - for horizontal and vertical scrolling
+        size_hint: 1,None
+        # for fixed height (extra) usually
+        # height: 4000
+        # for required height of the app - responsive
+        height: self.minimum_height
+        # width: 1000
+
 
 <StackLayoutExample>:
     # left-right top-bottom
     # lr-tb is default
     # other combinations include rl-bt,rl-tb,lr-bt
     orientation: "lr-tb"
+    # padding: ("20dp","20dp","20dp","20dp")
+    # spacing: "20dp", "20dp"
 
     #Button:
     #    text: "A"
