@@ -19,6 +19,9 @@ class WidgetsExample(GridLayout):
         if self.flag:
             self.count+=1
             self.my_text=str(self.count)
+    def on_switch_active(self,switch):
+        print("Switch: "+str(switch.active))
+
 
     def on_toggle_button_state(self,toggle_button):
 

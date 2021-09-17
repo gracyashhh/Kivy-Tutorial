@@ -17,6 +17,11 @@ WidgetsExample:
         font_size: "80dp"
         # color takes both rgba(without-see below) as well as color names(with) quotes
         color: 1,.5,1,1
+    Switch:
+        on_active:root.on_switch_active(self)
+        size_hint:None,1
+        width:"100dp"
+
 
 <PageLayoutExample@PageLayout>:
     MainWidget:
