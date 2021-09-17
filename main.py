@@ -5,8 +5,18 @@ from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
 # from kivy.uix.scrollview import ScrollView
+from kivy.uix.widget import Widget
+from kivy.properties import StringProperty
 from kivy.metrics import dp
 from kivy.uix.button import Button
+
+class WidgetsExample(GridLayout):
+    my_text=StringProperty("1")
+    count=1
+    def on_button_click(self):
+        print("Button clicked")
+        self.count+=1
+        self.my_text=str(self.count)
 
 # class ScrollViewExample(ScrollView):
 #     pass
