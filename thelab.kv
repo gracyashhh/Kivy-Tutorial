@@ -18,18 +18,22 @@ WidgetsExample:
         # color takes both rgba(without-see below) as well as color names(with) quotes
         color: 1,.5,1,1
     Switch:
+        id: my_switch
         on_active:root.on_switch_active(self)
+        active:True
         size_hint:None,1
         width:"100dp"
     Slider:
+        disabled: not my_switch.active
+        id: my_slider
         min:0
         max:100
         # value is for setting default position value of the slider
         value:0
-        on_value:root.on_slider_value(self)
+        # on_value:root.on_slider_value(self)
         orientation: "vertical"
     Label:
-        text:root.slider_value_txt
+        text:str(int(my_slider.value))
 
 
 <PageLayoutExample@PageLayout>:
