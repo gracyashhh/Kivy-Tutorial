@@ -14,6 +14,7 @@ class WidgetsExample(GridLayout):
     my_text=StringProperty("1")
     count=1
     flag=BooleanProperty(False)
+    slider_value_txt=StringProperty("0")
     def on_button_click(self):
         print("Button clicked")
         if self.flag:
@@ -21,6 +22,11 @@ class WidgetsExample(GridLayout):
             self.my_text=str(self.count)
     def on_switch_active(self,switch):
         print("Switch: "+str(switch.active))
+
+    def on_slider_value(self,slider):
+        self.slider_value_txt=str(int(slider.value))
+        print("Slider:"+self.slider_value_txt)
+
 
 
     def on_toggle_button_state(self,toggle_button):
