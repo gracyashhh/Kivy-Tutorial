@@ -21,6 +21,15 @@ WidgetsExample:
         on_active:root.on_switch_active(self)
         size_hint:None,1
         width:"100dp"
+    Slider:
+        min:0
+        max:100
+        # value is for setting default position value of the slider
+        value:0
+        on_value:root.on_slider_value(self)
+        orientation: "vertical"
+    Label:
+        text:root.slider_value_txt
 
 
 <PageLayoutExample@PageLayout>:
