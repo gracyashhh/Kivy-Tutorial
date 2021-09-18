@@ -39,6 +39,18 @@ WidgetsExample:
         ProgressBar:
             max:100
             value:my_slider.value
+    TextInput:
+        id: my_text
+        size_hint:None,1
+        width:"100dp"
+        text:"Ice cream"
+        multiline:False
+        ### IMPORTANT: ON_TEXT_VALIDATE on the LHS in the line below is predefine and needs to be the exact same for it to work
+        # on pressing the enter key into the textbox and the effect to display on label
+        # whereas what is on RHS is respective to the function name from the .py file
+        on_text_validate: root.on_text_validate(self)
+    Label:
+        text:"You bae is "+root.text_input
 
 
 <PageLayoutExample@PageLayout>:
