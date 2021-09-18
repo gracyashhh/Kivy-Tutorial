@@ -29,11 +29,16 @@ WidgetsExample:
         min:0
         max:100
         # value is for setting default position value of the slider
-        value:0
+        value:50
         # on_value:root.on_slider_value(self)
         orientation: "vertical"
-    Label:
-        text:str(int(my_slider.value))
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text:str(int(my_slider.value))
+        ProgressBar:
+            max:100
+            value:my_slider.value
 
 
 <PageLayoutExample@PageLayout>:
